@@ -1,6 +1,7 @@
 require 'sinatra'
+require 'sinatra/reloader' if development?
 require_relative './models/pig_latinize' 
 
   get '/:word' do
-    "#{Capitalize.cap params[:word]} "
+    "#{Latinize.pig params[:word]} "
   end
