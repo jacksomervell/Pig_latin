@@ -2,4 +2,13 @@
 
 <h1><%= @title %></h1> 
 
+<form action="/travel" method="post">
+  <input type="text" name="distance" placeholder = "your distance" autofocus>
+  <input type="text" name="mpg" placeholder= "your MPG">
+  <input type="text" name="cost" placeholder = "your cost">
+  <input type="text" name="speed" placeholder = "your speed">
+  <button type = 'submit'> Calculate</button>
+</form>
+
+<p> This trip will take  <%= @time %> and cost $ <%= @cost %>  </p>
 </html>

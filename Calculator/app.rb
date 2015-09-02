@@ -22,9 +22,24 @@ end
 
 post '/BMI_calculate' do
 
-  @BMI = (([:weight] / [:height] * [:height]) * 703)
+  @BMI = (params[:weight].to_f / (params[:height].to_f * params[:height].to_f))
+
+erb :BMI
 
 end
+
+post '/travel' do
+
+  @time = params[:distance].to_f/params[:speed].to_f  
+
+  @actualMPG = (params[:mpg].to_f > 60) ? [0, params[:mpg].to_f - (params[:speed].to_f - 60) * 2].max : params[:mpg].to_f;
+
+  @cost = params[:distance].to_f / (@actualMPG * params[:cost].to_f);
+
+  erb :distance
+
+end
+
 
 get '/basic' do
   @title = 'Basic Calculator'
@@ -41,7 +56,7 @@ get '/BMI' do
   erb :bmi
 end
 
-get '/mileage' do
+get '/Mileage' do
   @title = 'Mileage calculator'
-  erb :mileage
+  erb :distance
 end
