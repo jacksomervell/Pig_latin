@@ -1,0 +1,13 @@
+<html>
+
+<h1><%= @title %></h1> 
+
+<form action="/BMI_calculate" method="post">
+  <input type="text" name="weight" placeholder = "What is your weight?" autofocus>
+  <input type="text" name="height" placeholder= "What is your height?">
+  <button type = 'submit'> Calculate</button>
+</form>
+
+<p><%= @BMI %></p>
+
+</html>

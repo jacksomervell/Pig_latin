@@ -1,0 +1,17 @@
+<html>
+
+
+<h1><%= @title %></h1> 
+
+<form action="/calculate" method="post">
+  <input type="text" name="first_num" placeholder = "your first number" autofocus>
+  <input type="text" name="symbol" placeholder= "+, -, /, *">
+  <input type="text" name="second_num" placeholder = "your second number">
+  <button type = 'submit'> Calculate</button>
+</form>
+
+
+<p><%= @basic %></p>
+
+
+</html>
