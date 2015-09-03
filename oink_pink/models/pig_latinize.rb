@@ -7,6 +7,6 @@ class Latinize
     else 
       word[1..word.length].concat word[0].concat "ay"
     end 
-  end 
+  end
 
 end
